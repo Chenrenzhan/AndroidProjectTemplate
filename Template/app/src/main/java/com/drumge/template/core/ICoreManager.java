@@ -3,6 +3,7 @@ package com.drumge.template.core;
 import android.content.Context;
 
 
+import com.drumge.template.annotation.CoreEvent;
 import com.drumge.template.log.MLog;
 
 import java.io.File;
@@ -16,7 +17,9 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * Created by Administrator on 2015/12/10.
+ * 管理所有的CoreClient类，以及@CoreEvent相关的方法
+ * 在使用了@CoreEvent注解的类，要使用addClient(this)来注册到CoreManager中
+ * 使用 {@notifyClients}方法来同时@CoreEvent的相关的方法
  */
 public class ICoreManager {
     public static final String YYMOBILE_DIR_NAME = "yymobile";
@@ -37,11 +40,6 @@ public class ICoreManager {
 
     private static Map<Object, Map<String, Method>> coreEventMethods = new HashMap<Object, Map<String, Method>>();
     public static Context context;
-    private static IEntCore entCore;
-    private static IUserCore userCore;
-    private static IAuthCore authCore;
-    private static IMediaCore mediaCore;  // media core
-    private static IChannelLinkCore channelLinkCore;
 
 
     public static Context getContext() {
@@ -460,67 +458,6 @@ public class ICoreManager {
 
     public static <T extends IBaseCore> T getCore(Class<T> cls) {
         return CoreFactory.getCore(cls);
-    }
-
-
-    /*
- * Ent消息透传服务
- * */
-    public static IEntCore getEntCore() {
-        if (entCore == null) {
-            entCore = CoreFactory.getCore(IEntCore.class);
-        }
-        return entCore;
-    }
-
-    /**
-     * 拥护信息服务
-     *
-     * @return 用户信息接口
-     */
-    public static IUserCore getUserCore() {
-        if (userCore == null) {
-            userCore = CoreFactory.getCore(IUserCore.class);
-        }
-
-        return userCore;
-    }
-
-    public static IAuthCore getAuthCore() {
-        if (authCore == null) {
-            authCore = CoreFactory.getCore(IAuthCore.class);
-        }
-
-        return authCore;
-    }
-
-
-    /**
-     * 媒体服务
-     * 提供媒体信息
-     *
-     * @return 媒体接口
-     */
-    public static IMediaCore getMediaCore() {
-        if (mediaCore == null) {
-            mediaCore = CoreFactory.getCore(IMediaCore.class);
-        }
-
-        return mediaCore;
-    }
-
-
-    /**
-     * 频道服务
-     * 提供频道信息
-     *
-     * @return 频道接口
-     */
-    public static IChannelLinkCore getChannelLinkCore(){
-        if (channelLinkCore==null){
-            channelLinkCore=CoreFactory.getCore(IChannelLinkCore.class);
-        }
-        return channelLinkCore;
     }
 
 }

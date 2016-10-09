@@ -12,7 +12,7 @@ import java.io.File;
 import java.util.HashMap;
 
 /**
- * Created by xianjiachao on 2016/7/6.
+ * 延迟初始化，避免一开始在Application中初始化的配置过多，无需再app启动立即完成初始化的可以在此初始化
  */
 public class LazyRun implements Runnable {
     private Context mContext;

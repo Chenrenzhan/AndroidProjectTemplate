@@ -1,6 +1,7 @@
 package com.drumge.template.view.component;
 
-import com.yy.mobile.util.DontProguardClass;
+
+import com.drumge.template.annotation.DontProguardClass;
 
 /**
  * Class Name:BasicChannelComponentContainer

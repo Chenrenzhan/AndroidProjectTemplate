@@ -2,16 +2,10 @@ package com.drumge.template.view.component;
 
 import android.support.v4.app.Fragment;
 
-import com.yy.mobile.ui.basicchanneltemplate.Template;
-
 /**
  * Created by xianjiachao on 2015/5/18.
  */
 public interface IComponent {
-
-    public Template getTemplate();
-
-    public void setTemplate(Template template);
 
     public void setAttachment(Object obj);
 

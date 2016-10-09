@@ -4,10 +4,10 @@ import android.content.Context;
 import android.os.Environment;
 import android.os.StatFs;
 import android.support.v4.util.Pair;
+import android.text.TextUtils;
 
-import com.yy.mobile.config.BasicConfig;
-import com.yy.mobile.util.asynctask.ScheduledTask;
-import com.yy.mobile.util.valid.BlankUtil;
+import com.drumge.template.BasicConfig;
+import com.drumge.template.ScheduledTask;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -94,7 +94,7 @@ public class LogManager {
      */
     public void addSingleLogRecord(String logName) {
         String records = getLogRecord();
-        if(BlankUtil.isBlank(records) ) {
+        if(TextUtils.isEmpty(records) ) {
             StringBuffer buffer = new StringBuffer();
             buffer.append("|"+logName);
             setLogRecord(buffer.toString());
@@ -113,7 +113,7 @@ public class LogManager {
      */
     public void removeSingleLogRecord(String logName) {
         String records = getLogRecord();
-        if(BlankUtil.isBlank(records)) {
+        if(TextUtils.isEmpty(records)) {
             return;
         } else if(records.contains(logName)) {
             String target = records.replaceAll("\\|"+logName,"");
@@ -171,10 +171,10 @@ public class LogManager {
             e.printStackTrace();
         }
         StringBuffer buffer = new StringBuffer("");
-        if(!BlankUtil.isBlank(records)) {
+        if(!TextUtils.isEmpty(records)) {
             String list[] = records.split("\\|");
             for (String s : list) {
-                if (!BlankUtil.isBlank(s)) {
+                if (!TextUtils.isEmpty(s)) {
                     buffer.append(s);
                     buffer.append("\r\n");
                 }
@@ -340,7 +340,7 @@ public class LogManager {
         //生成描述文件并加入压缩列表
         MLog.info(this, "collectLogByTime() : generating log description");
         String logDescFilePath = createLogDescriptionFile();
-        if(!BlankUtil.isBlank(logDescFilePath)) destLogFiles.add(new File(logDescFilePath));
+        if(!TextUtils.isEmpty(logDescFilePath)) destLogFiles.add(new File(logDescFilePath));
 
         //将SDK日志加入的压缩列表
         MLog.info(this,"collectLogByTime() : collecting SDK logs");
@@ -410,7 +410,7 @@ public class LogManager {
                 //开始压缩
                 if(destLogFiles.size() > 0) {
                     Pair<Integer,String> pack = LogZipCompress.getInstance().compressFiles(destLogFiles, uid);
-                    if(pack.first !=0 || BlankUtil.isBlank(pack.second)) {
+                    if(pack.first !=0 || TextUtils.isEmpty(pack.second)) {
                         if(listener != null)
                             listener.onCompressError(pack.first);
                     } else {
@@ -475,7 +475,7 @@ public class LogManager {
         //生成描述文件并加入压缩列表
         MLog.info(this,"collectLogBySize() : generating log description");
         String logDescFilePath = createLogDescriptionFile();
-        if(!BlankUtil.isBlank(logDescFilePath)) {
+        if(!TextUtils.isEmpty(logDescFilePath)) {
             File f = new File(logDescFilePath);
             destLogFiles.add(f);
         }
@@ -590,7 +590,7 @@ public class LogManager {
                 }
                 if(destLogFiles.size() > 0) {
                     Pair<Integer,String> pack = LogZipCompress.getInstance().compressFiles(destLogFiles, sdkLogFiles, uid);
-                    if(pack.first !=0 || BlankUtil.isBlank(pack.second)) {
+                    if(pack.first !=0 || TextUtils.isEmpty(pack.second)) {
                         if(listener != null)
                             listener.onCompressError(pack.first);
                     } else {

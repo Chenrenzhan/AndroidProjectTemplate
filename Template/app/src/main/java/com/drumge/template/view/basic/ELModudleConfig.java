@@ -1,11 +1,8 @@
 package com.drumge.template.view.basic;
 
-import com.yy.mobile.util.DontProguardClass;
-
 /**
  * Created by qiushunming on 16/1/11.
  */
-@DontProguardClass
 public final class ELModudleConfig {
 
     public static final int TOP_VIEW_GROUP = 0;

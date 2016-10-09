@@ -20,7 +20,7 @@ import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Toast;
 
-import com.drumge.template.NetworkUtils;
+import com.drumge.template.common.NetworkUtils;
 import com.drumge.template.SafeDispatchHandler;
 import com.drumge.template.log.MLog;
 import com.drumge.template.view.IDataStatus;

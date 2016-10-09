@@ -4,22 +4,24 @@ import android.os.Bundle;
 import android.support.v4.util.SparseArrayCompat;
 import android.view.ViewGroup;
 
+import com.drumge.template.view.component.Component;
+
 
 /**
- * Created by qiushunming on 16/1/11.
+ * 
  */
-public class ELModudleContext {
-    private LiveComponent component;
+public class ELModuleContext {
+    private Component component;
 
     private Bundle saveInstance;
 
     private SparseArrayCompat<ViewGroup> viewGroups = new SparseArrayCompat<>();
 
-    public LiveComponent getComponent() {
+    public Component getComponent() {
         return component;
     }
 
-    public void setComponent(LiveComponent component) {
+    public void setComponent(Component component) {
         this.component = component;
     }
 

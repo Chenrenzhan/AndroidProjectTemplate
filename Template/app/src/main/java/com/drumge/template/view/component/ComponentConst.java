@@ -1,14 +1,6 @@
 package com.drumge.template.view.component;
 
-import com.yy.mobile.ui.audience.OnlineAudienceComponent;
-import com.yy.mobile.ui.basicfunction.SlideFunctionsComponent;
-import com.yy.mobile.ui.basicgunview.BasicDanmuComponent;
-import com.yy.mobile.ui.chatemotion.ChatEmotionComponent;
-import com.yy.mobile.ui.likelamp.LikeLampComponent;
-import com.yy.mobile.ui.profile.InteractiveExpandComponent;
-import com.yy.mobile.ui.programinfo.OfficialProgramInfoComponent;
-import com.yy.mobile.ui.programinfo.ProgramInfoFragment;
-import com.yy.mobile.util.DontProguardClass;
+import com.drumge.template.annotation.DontProguardClass;
 
 /**
  * Class Name:BasicChannelComponentContainer
@@ -79,19 +71,6 @@ public class ComponentConst {
 //    public static final String BASIC_DANMU_COMPONENT = "BasicDanmuComponent";//弹幕等等
 
     //Level 1
-    public static final String PROGRAM_INFO_FRAGMENT = ProgramInfoFragment.class.getSimpleName(); //节目信息区
-    public static final String OFFICIAL_PROGRAM_INFO_FRAGMENT = OfficialProgramInfoComponent.class.getSimpleName(); //官网节目信息区
-    public static final String ONLINE_AUDIENCE_COMPONENT = OnlineAudienceComponent.class.getSimpleName();//在线列表
-    public static final String INTERACTIVE_EXPAND_COMPONENT = InteractiveExpandComponent.class.getSimpleName();//扩展区
-    //Level 2
-    public static final String CHAT_EMOTION_COMPONENT = ChatEmotionComponent.class.getSimpleName();//发言组件
-    public static final String LIVE_COMPONENT = "LiveComponent"; //业务区--秀场
-    public static final String MOBILE_LIVE_COMPONENT = "MobileLiveComponent"; //业务区--现场
-    public static final String LIKE_LAMP_COMPONENT = LikeLampComponent.class.getSimpleName(); //氛围灯
-    public static final String SLIDE_FUNCTION_COMPONENT = SlideFunctionsComponent.class.getSimpleName();//滑动菜单区域
-
-    //Default Level 3
-    public static final String BASIC_DANMU_COMPONENT = BasicDanmuComponent.class.getSimpleName();//弹幕等等
 
     //组件被用到何处
     public static final int COMPONENT_BUSINESS_SIDE_LIVE = 0;//直播间

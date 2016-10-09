@@ -9,9 +9,8 @@ import android.support.v4.app.FragmentTransaction;
 import android.util.SparseArray;
 import android.view.View;
 
-import com.yy.mobile.ui.basicchanneltemplate.Template;
-import com.yy.mobile.util.SafeDispatchHandler;
-import com.yy.mobile.util.log.MLog;
+import com.drumge.template.SafeDispatchHandler;
+import com.drumge.template.log.MLog;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,24 +48,6 @@ public abstract class ComponentContainer extends Component implements IComponent
     protected void registerIncludesComponent(SparseArray<IComponent> components) {
     }
 
-    public void registerComponents(Template template) {
-        if (includes == null) {
-            includes = new SparseArray<IComponent>();
-            registerIncludesComponent(includes);
-        }
-
-        for (int i = 0; i < includes.size(); i++) {
-            IComponent component = includes.valueAt(i);
-            component.setTemplate(template);
-            if (component instanceof IComponentContainer) {
-                IComponentContainer componentContainer = (IComponentContainer) component;
-                componentContainer.registerComponents(template);
-            }
-        }
-
-        setTemplate(template);
-    }
-
     public void setComponents(SparseArray<IComponent> components) {
         if (components == null) {
             return;
@@ -99,7 +80,6 @@ public abstract class ComponentContainer extends Component implements IComponent
                 includes.put(components.keyAt(i), components.valueAt(i));
 
                 IComponent component = components.valueAt(i);
-                component.setTemplate(getTemplate());
 
                 Fragment fragment = component.getContent();
                 if (component.isInitHidden()) {

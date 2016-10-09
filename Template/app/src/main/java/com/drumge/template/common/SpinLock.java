@@ -1,4 +1,4 @@
-package com.drumge.template;
+package com.drumge.template.common;
 
 import java.util.concurrent.atomic.AtomicReference;
 

@@ -5,7 +5,10 @@ import java.lang.reflect.Method;
 import java.util.Map;
 
 /**
- * Created by qiushunming on 16/1/11.
+ * 根据module的类的名字，反射调用类的方法
+ * 使用： 
+ * 1、先调用{@init()}初始化，保存所有的module的Map<类名，Module>
+ * 2、低调用{@invode()}通过反射调用module的某个方法
  */
 public class ELPublicApiHelper {
     private Map<String , ELAbsModule> allModudles;

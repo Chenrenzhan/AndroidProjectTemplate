@@ -2,7 +2,6 @@ package com.drumge.template.view.fragment;
 
 import android.annotation.TargetApi;
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -11,12 +10,10 @@ import android.support.v4.app.Fragment;
 import android.view.View;
 import android.widget.Toast;
 
-import com.drumge.template.NetworkUtils;
+import com.drumge.template.common.NetworkUtils;
 import com.drumge.template.SafeDispatchHandler;
 import com.drumge.template.log.MLog;
 import com.drumge.template.view.IDataStatus;
-
-import java.util.List;
 
 /**
  * Created by Administrator on 2016/1/5.

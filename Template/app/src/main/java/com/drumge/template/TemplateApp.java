@@ -8,6 +8,8 @@ import android.support.multidex.MultiDex;
 import com.drumge.template.crash.CrashFrequencyChecker;
 import com.drumge.template.log.Logger;
 import com.drumge.template.log.MLog;
+import com.zhy.http.okhttp.OkHttpUtils;
+import com.zhy.http.okhttp.request.OkHttpRequest;
 
 import java.io.File;
 import java.util.HashMap;

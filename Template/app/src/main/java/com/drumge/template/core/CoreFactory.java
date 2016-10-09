@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
- * @author daixiang
+ * IBaseCore结构的具体实现类要注册到该工厂类类，并通过反射来创建实例
  *
  */
 public class CoreFactory {

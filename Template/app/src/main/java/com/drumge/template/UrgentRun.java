@@ -3,16 +3,18 @@ package com.drumge.template;
 import android.app.Application;
 import android.content.Context;
 
+import com.drumge.template.common.SpinLock;
 import com.drumge.template.crash.ANRDetector;
+import com.drumge.template.imageloader.ImageLoaderConfigs;
 import com.drumge.template.log.MLog;
 
-import java.io.File;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 
 /**
- * Created by xianjiachao on 2016/7/6.
+ * 紧急初始化加载，需要在app启动快速初始化的配置可以在这里完成初始化
+ * 紧急初始化完成之后进行LazyRun
  */
 public class UrgentRun implements Runnable {
     public final static int RUNNING_STATE_NOT_RUN = 0;
@@ -64,6 +66,8 @@ public class UrgentRun implements Runnable {
         // TODO 初始化okhttputils 
 //        RequestManager.instance().init(mContext, ICoreManager.YYMOBILE_DIR_NAME + File.separator + "http");
 //        ImageManager.instance().init(mContext, ICoreManager.YYMOBILE_DIR_NAME + File.separator + "image");
+        // 初始化 imageloader
+        ImageLoaderConfigs.initImageloader(TemplateApp.gContext);
     }
 
     @Override

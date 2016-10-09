@@ -14,6 +14,7 @@ import android.os.Process;
 import android.provider.Settings.Secure;
 import android.telephony.TelephonyManager;
 
+import com.drumge.template.common.StringUtil;
 import com.drumge.template.log.MLog;
 
 import java.util.ArrayList;

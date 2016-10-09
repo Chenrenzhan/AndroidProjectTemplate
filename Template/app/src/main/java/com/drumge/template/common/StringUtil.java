@@ -1,4 +1,4 @@
-package com.drumge.template;
+package com.drumge.template.common;
 
 public class StringUtil {
 	

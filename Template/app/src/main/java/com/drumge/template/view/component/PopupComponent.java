@@ -18,7 +18,6 @@ import com.drumge.template.log.MLog;
 public abstract class PopupComponent extends DialogFragment implements IPopupComponent {
     private int mOrientation;
 
-    private Template mTemplate;
     private Object mAttachment;
     private ComponentDimension dimension;
     private FragmentManager mParentFragMgr;
@@ -88,16 +87,6 @@ public abstract class PopupComponent extends DialogFragment implements IPopupCom
     @Override
     public boolean isShowing() {
         return getDialog() != null && getDialog().isShowing();
-    }
-
-    @Override
-    public Template getTemplate() {
-        return mTemplate;
-    }
-
-    @Override
-    public void setTemplate(Template template) {
-        mTemplate = template;
     }
 
     @Override

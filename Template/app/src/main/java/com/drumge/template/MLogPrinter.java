@@ -2,6 +2,8 @@ package com.drumge.template;
 
 import android.util.Printer;
 
+import com.drumge.template.log.MLog;
+
 /**
  * MLog实现的printer
  * Created by Zhongyongsheng on 16/7/8.

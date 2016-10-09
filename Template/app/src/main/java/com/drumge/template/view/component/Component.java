@@ -1,20 +1,19 @@
 package com.drumge.template.view.component;
 
+import android.annotation.TargetApi;
 import android.content.res.Configuration;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.View;
 
-import com.yy.mobile.ui.BaseLinkFragment;
-import com.yy.mobile.ui.basicchanneltemplate.Template;
-import com.yy.mobile.ui.basicchanneltemplate.behavior.IComponentLoadBehavior;
-import com.yy.mobile.util.log.MLog;
+import com.drumge.template.log.MLog;
+import com.drumge.template.view.fragment.BaseLinkFragment;
 
 /**
  * Created by xianjiachao on 2015/4/29.
  */
 public abstract class Component extends BaseLinkFragment implements IComponent {
-    private Template mTemplate;
     private Object mAttachment;
     boolean mInitHidden;
     private ComponentDimension dimension;
@@ -30,9 +29,6 @@ public abstract class Component extends BaseLinkFragment implements IComponent {
         }
         setComponentCreated(true);//通過參數設置
         MLog.debug(this, "Component onActivityCreated className=" + getClass().getSimpleName());
-        if(mTemplate!=null && mTemplate.getComponentBehavior(IComponentLoadBehavior.class)!=null){
-            mTemplate.getComponentBehavior(IComponentLoadBehavior.class).onComponentLoad(this);
-        }
     }
 
     @Override
@@ -40,15 +36,6 @@ public abstract class Component extends BaseLinkFragment implements IComponent {
         super.onViewCreated(view, savedInstanceState);
     }
 
-    @Override
-    public Template getTemplate() {
-        return  mTemplate;
-    }
-
-    @Override
-    public void setTemplate(Template template) {
-        mTemplate = template;
-    }
 
     @Override
     public void setAttachment(Object obj) {
@@ -108,6 +95,7 @@ public abstract class Component extends BaseLinkFragment implements IComponent {
      * 获取当前组件fragment的尺寸
      * @return
      */
+    @TargetApi(Build.VERSION_CODES.HONEYCOMB)
     public ComponentDimension getDimension(){
         if (dimension==null){
             dimension = new ComponentDimension();
@@ -143,9 +131,9 @@ public abstract class Component extends BaseLinkFragment implements IComponent {
         isComponentCreated = componentCreated;
     }
 
-//    @Override
-//    public void onDestroy() {
-//        setComponentCreated(false);
-//        super.onDestroy();
-//    }
+    @Override
+    public void onDestroy() {
+        setComponentCreated(false);
+        super.onDestroy();
+    }
 }

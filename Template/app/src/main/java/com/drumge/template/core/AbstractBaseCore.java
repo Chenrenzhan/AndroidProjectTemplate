@@ -6,17 +6,12 @@ package com.drumge.template.core;
 
 import android.content.Context;
 
-import com.yy.mobile.YYHandler;
-import com.yy.mobile.YYHandlerMgr;
-import com.yy.mobile.yyprotocol.core.Uint16;
-import com.yymobile.core.config.BasicYYHandlerMgr;
-import com.yymobile.core.ent.EntNoRetryPolicy;
-import com.yymobile.core.ent.protos.IEntProtocol;
-
-import java.util.Map;
+import com.drumge.template.BasicYYHandlerMgr;
+import com.drumge.template.YYHandler;
+import com.drumge.template.YYHandlerMgr;
 
 /**
- * @author daixiang
+ * 所有的IBaseCore接口的实现类都必须继承此抽象类，因为CoreFactory工厂使用此类来区分接口和具体实现类的
  *
  */
 public abstract class AbstractBaseCore implements IBaseCore {
@@ -64,12 +59,10 @@ public abstract class AbstractBaseCore implements IBaseCore {
 	}
 	
 	protected String sendEntRequest(IEntProtocol entProtocol){
-		  return ICoreManager.getEntCore().send(entProtocol);
+		// TODO 此处进行网络请求，即把协议发送过去
+		  return "";
 	}
 
-    protected String sendEntRequest(IEntProtocol entProtocol, Map<Uint16, String> headerExtend){
-        return ICoreManager.getEntCore().send(entProtocol, new EntNoRetryPolicy(), headerExtend);
-    }
 	
 //	private enum TaskState {
 //		NoTask,

@@ -3,13 +3,13 @@ package com.drumge.template.view.basic;
 import android.text.TextUtils;
 
 /**
- * Created by qiushunming on 16/1/11.
+ * 
  */
 public class ELModudleFactory {
 
     /**
      * 通过反射new 对象
-     * @param name
+     * @param name 必须是包括完整的包名已经类名
      * @return
      */
     public static ELAbsModule newModudleInstance(String name) {

@@ -4,8 +4,7 @@
 package com.drumge.template.core;
 
 /**
- * @author daixiang
- *
+ * 网络请求数据的接口，所有的网络求数据的具体类都应继承接口
  */
 public interface IBaseCore {
 

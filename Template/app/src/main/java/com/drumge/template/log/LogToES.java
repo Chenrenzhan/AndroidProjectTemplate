@@ -3,7 +3,7 @@ package com.drumge.template.log;
 import android.os.SystemClock;
 import android.util.Log;
 
-import com.yy.mobile.config.BasicConfig;
+import com.drumge.template.BasicConfig;
 
 import java.io.BufferedWriter;
 import java.io.File;

@@ -1,4 +1,4 @@
-package com.drumge.template;
+package com.drumge.template.common;
 
 import android.content.Context;
 import android.content.Intent;
