@@ -5,7 +5,7 @@ android {
     buildToolsVersion "23.0.2"
     defaultConfig {
         applicationId "com.drumge.template"
-        minSdkVersion 9
+        minSdkVersion 11
         targetSdkVersion 23
         versionCode 1
         versionName "1.0"
@@ -38,4 +38,7 @@ dependencies {
     debugCompile 'com.squareup.leakcanary:leakcanary-android:1.4'
 
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+
+    // https://github.com/dinuscxj/RecyclerRefreshLayout/blob/master/README-ZH.md
+    compile 'com.dinuscxj:recyclerrefreshlayout:2.0.1'
 }

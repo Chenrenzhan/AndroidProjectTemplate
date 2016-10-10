@@ -6,12 +6,30 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     tools:context="com.drumge.template.MainActivity">
+    
+    <com.drumge.template.status.RefreshLayout
+        android:id="@+id/status"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent" >
+        <RelativeLayout
+            android:id="@+id/layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:background="#aa00aa99">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="Hello World!"
+                />
+        </RelativeLayout>
+        
+    </com.drumge.template.status.RefreshLayout>
+        
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        />
+    
 
 </RelativeLayout>
