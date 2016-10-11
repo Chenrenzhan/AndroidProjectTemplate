@@ -24,12 +24,57 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:text="Hello World!"
+                
                 />
         </RelativeLayout>
         
     </com.drumge.template.status.RefreshLayout>
         
-
+    <FrameLayout
+        android:id="@+id/frame_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="数据"/>
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="网络"/>
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="请求"/>
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="加载"/>
+        </LinearLayout>
+        
+        
+       
+    </FrameLayout>
+    
+    <com.drumge.template.status.StateLayout
+        android:id="@+id/state"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" 
+        android:visibility="gone"
+        android:background="#ff0000">
+        
+        
+        </com.drumge.template.status.StateLayout>
     
 
 </RelativeLayout>

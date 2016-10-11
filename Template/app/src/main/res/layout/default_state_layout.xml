@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/gp_game_no_net_root"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<View-->
+            <!--android:layout_width="128dp"-->
+            <!--android:layout_height="120dp"-->
+            <!--android:background="@drawable/gp_game_icon_no_net"></View>-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="25dp"-->
+            <!--android:gravity="center"-->
+            <!--android:lineSpacingExtra="8dp"-->
+            <!--android:text="@string/gp_game_icon_no_net"-->
+            <!--android:textColor="@color/gp_game_text_second_grey"-->
+            <!--android:textSize="@dimen/pt_32" />-->
+    <!--</LinearLayout>-->
+
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/gp_game_no_data_root"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<View-->
+            <!--android:id="@+id/gp_game_no_data_icon"-->
+            <!--android:layout_width="128dp"-->
+            <!--android:layout_height="120dp"-->
+            <!--android:background="@drawable/gp_game_icon_no_game"></View>-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/gp_game_no_data_tv"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="25dp"-->
+            <!--android:gravity="center"-->
+            <!--android:lineSpacingExtra="8dp"-->
+            <!--android:text="@string/gp_game_icon_no_game_data"-->
+            <!--android:textColor="@color/gp_game_text_second_grey"-->
+            <!--android:textSize="@dimen/pt_32" />-->
+    <!--</LinearLayout>-->
+
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/gp_game_request_failed_root"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:gravity="center"-->
+        <!--android:orientation="vertical">-->
+
+        <!--<View-->
+            <!--android:layout_width="128dp"-->
+            <!--android:layout_height="120dp"-->
+            <!--android:background="@drawable/gp_game_icon_request_failed"></View>-->
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="25dp"-->
+            <!--android:gravity="center"-->
+            <!--android:lineSpacingExtra="8dp"-->
+            <!--android:text="@string/gp_game_icon_request_failed"-->
+            <!--android:textColor="@color/gp_game_text_second_grey"-->
+            <!--android:textSize="@dimen/pt_32" />-->
+    <!--</LinearLayout>-->
+
+
+    <!--<com.flamingo.gpgame.view.widget.progressbar.ProgressBarCircularIndeterminate-->
+        <!--android:id="@+id/gp_game_progress"-->
+        <!--android:layout_width="36dp"-->
+        <!--android:layout_height="36dp"-->
+        <!--android:layout_gravity="center"-->
+        <!--android:background="@color/gp_game_top_bar_background">-->
+
+    <!--</com.flamingo.gpgame.view.widget.progressbar.ProgressBarCircularIndeterminate>-->
+
+</FrameLayout>
